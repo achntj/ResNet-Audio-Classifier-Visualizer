@@ -1,2 +1,5 @@
 __pycache__/
 venv/
+chirpingbirds.wav
+models/
+esc50_data/
