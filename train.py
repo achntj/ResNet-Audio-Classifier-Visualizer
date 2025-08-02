@@ -32,7 +32,7 @@ image = (
 )
 
 volume = modal.Volume.from_name("esc50-data", create_if_missing=True)
-modal_volume = modal.Volume.from_name("esc-model", create_if_missing=True)
+model_volume = modal.Volume.from_name("esc-model", create_if_missing=True)
 
 
 class ESC50Dataset(Dataset):
@@ -93,7 +93,7 @@ def mixup_criterion(criterion, pred, y_a, y_b, lam):
 @app.function(
     image=image,
     gpu="A10G",
-    volumes={"/data": volume, "/models": modal_volume},
+    volumes={"/data": volume, "/models": model_volume},
     timeout=60 * 60 * 3,
 )
 def train():
@@ -107,7 +107,7 @@ def train():
 
     train_transform = nn.Sequential(
         T.MelSpectrogram(
-            sample_rate=22050,
+            sample_rate=44100,
             n_fft=1024,
             hop_length=512,
             n_mels=128,
@@ -122,7 +122,7 @@ def train():
 
     val_transform = nn.Sequential(
         T.MelSpectrogram(
-            sample_rate=22050,
+            sample_rate=44100,
             n_fft=1024,
             hop_length=512,
             n_mels=128,
