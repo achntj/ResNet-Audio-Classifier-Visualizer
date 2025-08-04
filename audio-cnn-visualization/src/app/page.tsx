@@ -176,6 +176,22 @@ export default function HomePage() {
           <h1 className="mb-4 text-4xl font-light tracking-tight text-stone-900">
             CNN Audio Visualizer
           </h1>
+          <h3 className="text-md mb-4 font-light tracking-tight text-stone-900">
+            Built by{" "}
+            <Link
+              href="https://achintyajha.com"
+              className="text-amber-600 hover:text-amber-800"
+            >
+              Achintya
+            </Link>
+            {" | "}
+            <Link
+              className="text-amber-600 hover:text-amber-800"
+              href="https://github.com/achntj/ResNet-Audio-Classifier-Visualizer"
+            >
+              Source
+            </Link>
+          </h3>
           <p>
             Learn more about this project{" "}
             <Link
