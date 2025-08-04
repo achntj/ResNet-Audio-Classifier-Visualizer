@@ -116,10 +116,10 @@ export default function About() {
                   Top Predictions
                 </h3>
                 <p>
-                  The model's top 3 classifications with confidence percentages.
-                  Each prediction includes an emoji representing the sound
-                  category. The highest confidence result is highlighted with a
-                  primary badge.
+                  The model{"'"}s top 3 classifications with confidence
+                  percentages. Each prediction includes an emoji representing
+                  the sound category. The highest confidence result is
+                  highlighted with a primary badge.
                 </p>
               </div>
               <div className="rounded-lg bg-white p-4 shadow-sm">
