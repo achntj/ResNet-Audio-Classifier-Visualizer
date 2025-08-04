@@ -229,6 +229,10 @@ export default function HomePage() {
                 ESC-50 dataset
               </Link>
             </p>
+            <p className="mt-1 text-xs text-stone-400">
+              These links will download the samples. You can then upload them
+              below to test the classifier.
+            </p>
           </section>
           <p className="text-md mb-8 text-stone-600">
             Upload a .wav file to see model predictions and visualizations
